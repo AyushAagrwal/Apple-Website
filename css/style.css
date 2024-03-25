@@ -368,3 +368,151 @@ body {
   color: #1371cf;
   text-decoration: none;
 }
+
+
+/* Define keyframe animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations */
+.discount-content,
+.iphone-banner,
+.iphone-banner-2,
+.watch-banner,
+.apple-items {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.discount-content {
+  animation-name: fadeInUp;
+}
+
+.iphone-banner {
+  animation-name: fadeInLeft;
+}
+
+.iphone-banner-2 {
+  animation-name: fadeInRight;
+}
+
+.watch-banner {
+  animation-name: fadeInLeft;
+}
+
+.apple-items {
+  animation-name: fadeInUp;
+}
+
+/* Add hover effect */
+.learn-buy a:hover {
+  color: #265985; /* Darker blue for hover effect */
+}
+
+.learn-buy-2 a:hover {
+  color: #265985; /* Darker blue for hover effect */
+}
+
+.learn-buy-watch a:hover {
+  color: #265985; /* Darker blue for hover effect */
+}
+
+/* Add media queries for responsiveness */
+@media only screen and (max-width: 992px) {
+  .heading-text {
+    padding: 3% 15%; /* Adjust padding for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .nav-list > li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .discount-content,
+  .iphone-banner,
+  .iphone-banner-2,
+  .watch-banner,
+  .apple-items {
+    animation: none; /* Disable animation on smaller screens */
+  }
+
+  .iphone-name,
+  .iphone-name-2,
+  .watch-name,
+  .heading-text {
+    padding: 3% 10%; /* Adjust padding for smaller screens */
+  }
+
+  .heading > img,
+  .watch-banner > img {
+    margin-left: 0; /* Center the images on smaller screens */
+  }
+
+  .sectence > p {
+    margin-left: 0; /* Adjust margin for smaller screens */
+  }
+
+  .footer-menu {
+    flex-direction: column; /* Stack footer menu items on smaller screens */
+    text-align: center; /* Center-align footer menu items */
+    text-indent: 0; /* Reset text indent */
+  }
+
+  .footer-menu ul {
+    margin-bottom: 20px; /* Add spacing between footer menu sections */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .heading-text {
+    padding: 3% 8%; /* Further adjust padding for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .heading-text {
+    padding: 3% 5%; /* Further adjust padding for smaller screens */
+  }
+}
